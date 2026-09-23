@@ -5,21 +5,21 @@
 class Cashctl < Formula
   desc "A wallet CLI for NIP-CASH cash tokens and NIP-CW circle wallets."
   homepage "https://github.com/ohstr/cashctl"
-  version "0.4.0"
+  version "0.4.1"
   license "Unlicense"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ohstr/cashctl/releases/download/v0.4.0/cashctl_darwin_amd64.tar.gz"
-      sha256 "8dd2e4cd2aa9c2289fbf6cbc8694691a2af9feecff765327bf0e63d4bc534c7c"
+      url "https://github.com/ohstr/cashctl/releases/download/v0.4.1/cashctl_darwin_amd64.tar.gz"
+      sha256 "69e653416587da348acb994c641ae597560605509ab41e2f197f57444af87ed6"
 
       define_method(:install) do
         bin.install "cashctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ohstr/cashctl/releases/download/v0.4.0/cashctl_darwin_arm64.tar.gz"
-      sha256 "1e1280dc2b74de3d0a07dfc9edaab72eb82ab5d7b14d7934e3b4b37d235c00ce"
+      url "https://github.com/ohstr/cashctl/releases/download/v0.4.1/cashctl_darwin_arm64.tar.gz"
+      sha256 "1e97c96e079c1e101de11998ba41011e9e21e8864276eef3e0e1e260cf663f00"
 
       define_method(:install) do
         bin.install "cashctl"
@@ -29,15 +29,15 @@ class Cashctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ohstr/cashctl/releases/download/v0.4.0/cashctl_linux_amd64.tar.gz"
-      sha256 "0a561516e516278ebb6623d39f87e9097816c148fa88c18c917d41e9569d0426"
+      url "https://github.com/ohstr/cashctl/releases/download/v0.4.1/cashctl_linux_amd64.tar.gz"
+      sha256 "807452062881c10440f6274c2bed6c1d068d9b98df9d9f22e2821d8686aac21b"
       define_method(:install) do
         bin.install "cashctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ohstr/cashctl/releases/download/v0.4.0/cashctl_linux_arm64.tar.gz"
-      sha256 "59ccc86243f2d68d2adb46bf4ed4dddd47401dc01e7d19135e6ff9828aa2ca56"
+      url "https://github.com/ohstr/cashctl/releases/download/v0.4.1/cashctl_linux_arm64.tar.gz"
+      sha256 "38575969c34a629451637d7d95f8b42953523c50aacf0250df5bfa5c0bfaacf5"
       define_method(:install) do
         bin.install "cashctl"
       end
