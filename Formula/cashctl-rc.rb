@@ -5,21 +5,21 @@
 class CashctlRc < Formula
   desc "Release-candidate build of cashctl -- see the cashctl formula for stable installs."
   homepage "https://github.com/ohstr/cashctl"
-  version "0.6.0-rc.2"
+  version "0.6.0-rc.3"
   license "Unlicense"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ohstr/cashctl/releases/download/v0.6.0-rc.2/cashctl_darwin_amd64.tar.gz"
-      sha256 "97e541f7511a85838577778b2bad13c2568c92f2a191d63c88ab681e462a8d00"
+      url "https://github.com/ohstr/cashctl/releases/download/v0.6.0-rc.3/cashctl_darwin_amd64.tar.gz"
+      sha256 "ee5c2304a114beeb9910299df28cba4e3b9128af84c21cc0ef6a31c66b010fb9"
 
       define_method(:install) do
         bin.install "cashctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ohstr/cashctl/releases/download/v0.6.0-rc.2/cashctl_darwin_arm64.tar.gz"
-      sha256 "93fc833858d52938be43422c74cdef03eec2fe0440b9dd7efe5090f25660c2e3"
+      url "https://github.com/ohstr/cashctl/releases/download/v0.6.0-rc.3/cashctl_darwin_arm64.tar.gz"
+      sha256 "8b679be0280f467d07715a2049f53699cc30deef2666a3434db0ed84e6adf3fb"
 
       define_method(:install) do
         bin.install "cashctl"
@@ -29,15 +29,15 @@ class CashctlRc < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ohstr/cashctl/releases/download/v0.6.0-rc.2/cashctl_linux_amd64.tar.gz"
-      sha256 "e29dad4c3b5df0a905e02e02455658123eb7a7219a96112d60b5d8c69b41b7ad"
+      url "https://github.com/ohstr/cashctl/releases/download/v0.6.0-rc.3/cashctl_linux_amd64.tar.gz"
+      sha256 "a65007b0dec8a5c1d38acc25a6e97188c978b17f31ffc21e33335ea74f9b7c00"
       define_method(:install) do
         bin.install "cashctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ohstr/cashctl/releases/download/v0.6.0-rc.2/cashctl_linux_arm64.tar.gz"
-      sha256 "4f86ee4aaab085e14a2db9505eb469d2b81fe3acbc982c749037371203b3bed0"
+      url "https://github.com/ohstr/cashctl/releases/download/v0.6.0-rc.3/cashctl_linux_arm64.tar.gz"
+      sha256 "ce4da00bbc763d55f6e10e0b24bc1092f6d389db767cc4343e2c5569f8dde341"
       define_method(:install) do
         bin.install "cashctl"
       end
