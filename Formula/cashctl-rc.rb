@@ -11,7 +11,7 @@ class CashctlRc < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/ohstr/cashctl/releases/download/v0.6.0-rc.11/cashctl_darwin_amd64.tar.gz"
-      sha256 "9641dfb4883b2c483f1c89c856c49f5915d693ed4c9572adc1e61885d3c73132"
+      sha256 "156eeb43e2115bcfc1370fba6d708d7c77b7203dabceba275c418e2c4f5842af"
 
       define_method(:install) do
         bin.install "cashctl"
@@ -19,7 +19,7 @@ class CashctlRc < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/ohstr/cashctl/releases/download/v0.6.0-rc.11/cashctl_darwin_arm64.tar.gz"
-      sha256 "37d4d40d0cfdada9efe2faa1e598290ab06fecf5f994fe359bb3da056afa8096"
+      sha256 "42488865ff0e696d218221c85fb95cb5a7aa8dd4dfd03f67f4032a1a77f2d10d"
 
       define_method(:install) do
         bin.install "cashctl"
@@ -30,14 +30,14 @@ class CashctlRc < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/ohstr/cashctl/releases/download/v0.6.0-rc.11/cashctl_linux_amd64.tar.gz"
-      sha256 "404f812bad2699254d73548c87b7707019f5bce3ffc440d4448f14460f79a3d2"
+      sha256 "18b12b3a8dc3b0618c4309686798653109fba3e5e8a639e07069eeb573c5d9af"
       define_method(:install) do
         bin.install "cashctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/ohstr/cashctl/releases/download/v0.6.0-rc.11/cashctl_linux_arm64.tar.gz"
-      sha256 "e99cae7e76d343270694a0aca72aaeda0f227491fffd95a2a35d7c9804c9b593"
+      sha256 "33d31fc3c7eea184b7bb212b19bb6c62a2d62b40ba14a1564d829d6c97c9c04b"
       define_method(:install) do
         bin.install "cashctl"
       end
