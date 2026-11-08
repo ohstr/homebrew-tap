@@ -5,21 +5,21 @@
 class NcliRc < Formula
   desc "Release-candidate build of ncli -- see the ncli formula for stable installs."
   homepage "https://github.com/ohstr/ncli"
-  version "0.8.0-rc.50"
+  version "0.8.0-rc.51"
   license "Unlicense"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ohstr/ncli/releases/download/v0.8.0-rc.50/ncli_darwin_amd64.tar.gz"
-      sha256 "fa7071731200d1d29c06923c4b78b0e6b3a0d7dd00c14f24914412de935bdb29"
+      url "https://github.com/ohstr/ncli/releases/download/v0.8.0-rc.51/ncli_darwin_amd64.tar.gz"
+      sha256 "22379627ee119a7eda78f275b9a44a650c0c8e105f67a8fc50ddcbfd75180380"
 
       define_method(:install) do
         bin.install "ncli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ohstr/ncli/releases/download/v0.8.0-rc.50/ncli_darwin_arm64.tar.gz"
-      sha256 "c0968e2b82f2a0dc502e91663f396b6ffa2bed2befd4bbba063a79741970222c"
+      url "https://github.com/ohstr/ncli/releases/download/v0.8.0-rc.51/ncli_darwin_arm64.tar.gz"
+      sha256 "0bf00a35fbf02d802b58dcd2dd051e5ea1424b5b0d9ff4539a7c66a8e429c361"
 
       define_method(:install) do
         bin.install "ncli"
@@ -29,15 +29,15 @@ class NcliRc < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ohstr/ncli/releases/download/v0.8.0-rc.50/ncli_linux_amd64.tar.gz"
-      sha256 "f3197fc01f12bc3786326066c92489f5565c3f7961b9a9b0d1bdabcf73cdc22d"
+      url "https://github.com/ohstr/ncli/releases/download/v0.8.0-rc.51/ncli_linux_amd64.tar.gz"
+      sha256 "bf2208264a08c8e49a6e41cdf0ae845b6f627b3325d6dcf280af93eb2398dd7e"
       define_method(:install) do
         bin.install "ncli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ohstr/ncli/releases/download/v0.8.0-rc.50/ncli_linux_arm64.tar.gz"
-      sha256 "2a217d0a8e1000d3ba9319c6690f96fa384ae8b08ba1499d0b5fdaa012a58a44"
+      url "https://github.com/ohstr/ncli/releases/download/v0.8.0-rc.51/ncli_linux_arm64.tar.gz"
+      sha256 "b78f287cc8c65f603ace301f15b0ce835a183d75211fdf5d1a544922f66a9e89"
       define_method(:install) do
         bin.install "ncli"
       end
